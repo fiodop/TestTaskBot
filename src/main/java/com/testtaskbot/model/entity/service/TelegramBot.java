@@ -1,4 +1,4 @@
-package com.testtaskbot.config.model.entity.service;
+package com.testtaskbot.model.entity.service;
 
 import org.springframework.context.annotation.Configuration;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -11,7 +11,7 @@ public class TelegramBot implements LongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        
+
     }
 
     @Override

@@ -1,6 +1,6 @@
-package com.testtaskbot.config.model.entity;
+package com.testtaskbot.model.entity;
 
-import com.testtaskbot.config.model.entity.Enums.Sex;
+import com.testtaskbot.model.entity.Enums.Sex;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

@@ -1,6 +1,6 @@
-package com.testtaskbot.config.model.entity.repository;
+package com.testtaskbot.model.entity.repository;
 
-import com.testtaskbot.config.model.entity.AppUser;
+import com.testtaskbot.model.entity.AppUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
