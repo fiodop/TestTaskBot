@@ -1,7 +1,6 @@
 package com.testtaskbot.config;
 
-import com.testtaskbot.model.entity.service.TelegramBot;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
@@ -12,19 +11,18 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 @Component
 public class BotInitializer {
 
-    private final TelegramBot telegramBot;
-
-    public BotInitializer(TelegramBot telegramBot) {
-        this.telegramBot = telegramBot;
-    }
+    @Autowired
+    TelegramBot bot;
 
     @EventListener({ContextRefreshedEvent.class})
     public void init() throws TelegramApiException {
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
-        try{
-            telegramBotsApi.registerBot(telegramBot);
-        } catch (TelegramApiException e) {
-            e.printStackTrace();
+
+        try {
+            telegramBotsApi.registerBot(bot);
+        }
+        catch (TelegramApiException e){
+
         }
     }
-}
+    }

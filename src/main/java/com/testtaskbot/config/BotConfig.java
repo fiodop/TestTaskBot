@@ -7,11 +7,8 @@ import org.springframework.context.annotation.PropertySource;
 
 @Data
 @Configuration
-@PropertySource("application.yml")
 public class BotConfig {
-    @Value("${bot.name}")
-    private String botName;
-    @Value("${bot.token}")
-    private String botToken;
+    private String botName = "wefmwpbot";
+    private String botToken = "7673200194:AAGPYxAVD4LnUHPomKOF4MUQtFfC09yJg3w";
 
 }

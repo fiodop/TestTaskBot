@@ -1,15 +1,13 @@
 package com.testtaskbot.model.entity;
 
-import com.testtaskbot.model.entity.Enums.Sex;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
+import com.testtaskbot.model.enums.Sex;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -18,14 +16,16 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AppUser {
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Id
     private int id;
     private String name;
     private String surname;
-    private Date birthday;
+    private LocalDate birthday;
 
     @Enumerated(EnumType.STRING)
     private Sex sex;
 
-    private byte[] photo;
+
+    private String UTMUrl;
 }

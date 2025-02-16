@@ -1,4 +1,4 @@
-package com.testtaskbot.model.entity.repository;
+package com.testtaskbot.repository;
 
 import com.testtaskbot.model.entity.AppUser;
 import org.springframework.data.jpa.repository.JpaRepository;

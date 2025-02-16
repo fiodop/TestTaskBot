@@ -24,6 +24,7 @@ repositories {
 }
 
 dependencies {
+    implementation("org.apache.poi:poi-ooxml:5.2.3")
     implementation("org.telegram:telegrambots:6.5.0")
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")

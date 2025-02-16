@@ -1,2 +1,16 @@
-bot.name = wefmwpbot
-bot.token = 7673200194:AAGPYxAVD4LnUHPomKOF4MUQtFfC09yJg3w
+
+spring:
+  application:
+    name: testbot
+  datasource:
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:5432/test_bot
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
